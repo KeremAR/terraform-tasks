@@ -1,0 +1,11 @@
+# Terraform-specific .gitignore rules for all subdirectories
+
+# Ignore .terraform directories in any subdirectory
+**/.terraform/
+
+# Ignore .tfstate files in any subdirectory. These files may contain secrets.
+**/*.tfstate
+**/*.tfstate.backup
+
+# Ignore crash log files in any subdirectory
+**/crash.log
