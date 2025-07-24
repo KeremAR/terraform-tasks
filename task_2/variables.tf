@@ -48,11 +48,6 @@ variable "aws_region" {
   type        = string
 }
 
-variable "availability_zone" {
-  description = "The availability zone to launch the EC2 instance in."
-  type        = string
-}
-
 variable "ami_filter_name" {
   description = "The name filter for the AWS AMI data source."
   type        = string

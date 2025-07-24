@@ -7,6 +7,5 @@ sg_name_filter     = "cmtr-zdv1y551-sg"
 project_tag        = "epam-tf-lab"
 id_tag             = "cmtr-zdv1y551"
 aws_region         = "us-east-1"
-availability_zone  = "us-east-1a"
 ami_filter_name    = "amzn2-ami-hvm-*-x86_64-gp2"
 ami_filter_owners  = ["amazon"] 
