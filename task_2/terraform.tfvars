@@ -1,0 +1,8 @@
+key_name           = "cmtr-zdv1y551-keypair"
+instance_name      = "cmtr-zdv1y551-ec2"
+instance_type      = "t2.micro"
+vpc_name_filter    = "cmtr-zdv1y551-vpc"
+subnet_name_filter = "cmtr-zdv1y551-public_subnet"
+sg_name_filter     = "cmtr-zdv1y551-sg"
+project_tag        = "epam-tf-lab"
+id_tag             = "cmtr-zdv1y551" 

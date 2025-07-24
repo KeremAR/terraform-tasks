@@ -16,31 +16,31 @@ data "aws_ami" "amazon_linux_2" {
 # Find the pre-existing VPC for this lab
 data "aws_vpc" "lab_vpc" {
   tags = {
-    Name = "cmtr-zdv1y551-vpc"
+    Name = var.vpc_name_filter
   }
 }
 
 # Find a public subnet within that VPC to launch our instance in
 data "aws_subnet" "lab_public_subnet" {
   vpc_id            = data.aws_vpc.lab_vpc.id
-  availability_zone = "us-east-1a" # Assuming a public subnet exists here
+  availability_zone = "us-east-1a"
 
   filter {
     name   = "tag:Name"
-    values = ["cmtr-zdv1y551-public_subnet"]
+    values = [var.subnet_name_filter]
   }
 }
 
 # Find the pre-existing Security Group
 data "aws_security_group" "lab_sg" {
   vpc_id = data.aws_vpc.lab_vpc.id
-  name   = "cmtr-zdv1y551-sg"
+  name   = var.sg_name_filter
 }
 
 # Define common tags in one place to reuse them
 locals {
   common_tags = {
-    Project = "epam-tf-lab"
-    ID      = "cmtr-zdv1y551"
+    Project = var.project_tag
+    ID      = var.id_tag
   }
 } 
