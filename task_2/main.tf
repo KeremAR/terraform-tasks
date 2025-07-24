@@ -5,11 +5,11 @@ provider "aws" {
 # Find the latest Amazon Linux 2 AMI
 data "aws_ami" "amazon_linux_2" {
   most_recent = true
-  owners      = ["amazon"]
+  owners      = var.ami_filter_owners
 
   filter {
     name   = "name"
-    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
+    values = [var.ami_filter_name]
   }
 }
 
