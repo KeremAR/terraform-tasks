@@ -4,7 +4,7 @@ resource "aws_instance" "instance" {
   key_name      = var.key_name
   subnet_id     = data.aws_subnet.lab_public_subnet.id
 
-  security_groups = [var.sg_name_filter]
+  vpc_security_group_ids = [data.aws_security_group.lab_sg.id]
 
   tags = {
     Name = var.instance_name
