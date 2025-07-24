@@ -41,4 +41,14 @@ variable "project_tag" {
 variable "id_tag" {
   description = "The value for the ID tag."
   type        = string
+}
+
+variable "aws_region" {
+  description = "The AWS region where resources will be deployed."
+  type        = string
+}
+
+variable "availability_zone" {
+  description = "The availability zone to launch the EC2 instance in."
+  type        = string
 } 
