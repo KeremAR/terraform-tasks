@@ -22,8 +22,8 @@ data "aws_vpc" "lab_vpc" {
 
 # Find a public subnet within that VPC to launch our instance in
 data "aws_subnet" "lab_public_subnet" {
-  vpc_id = data.aws_vpc.lab_vpc.id
-  availability_zone = "us-east-1a" 
+  vpc_id            = data.aws_vpc.lab_vpc.id
+  availability_zone = "us-east-1a"
 
   filter {
     name   = var.subnet_filter_key
