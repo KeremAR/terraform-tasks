@@ -1,0 +1,7 @@
+aws_region                = "us-east-1"
+project_tag               = "cmtr-zdv1y551"
+iam_group_name            = "cmtr-zdv1y551-iam-group"
+iam_policy_name           = "cmtr-zdv1y551-iam-policy"
+iam_role_name             = "cmtr-zdv1y551-iam-role"
+iam_instance_profile_name = "cmtr-zdv1y551-iam-instance-profile"
+s3_bucket_name            = "cmtr-zdv1y551-bucket-1753361994" 
