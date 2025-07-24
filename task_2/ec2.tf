@@ -6,6 +6,10 @@ resource "aws_instance" "instance" {
 
   vpc_security_group_ids = [data.aws_security_group.lab_sg.id]
 
+  depends_on = [
+    aws_key_pair.keypair
+  ]
+
   tags = {
     Name = var.instance_name
   }
