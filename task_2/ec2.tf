@@ -3,7 +3,7 @@ resource "aws_instance" "main" {
   instance_type = var.instance_type
   key_name      = aws_key_pair.main.key_name
   subnet_id     = data.aws_subnet.lab_public_subnet.id
-  
+
   vpc_security_group_ids = [data.aws_security_group.lab_sg.id]
 
   tags = merge(
