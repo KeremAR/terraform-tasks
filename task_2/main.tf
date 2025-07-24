@@ -4,11 +4,11 @@ provider "aws" {
 
 # Find the latest Amazon Linux 2 AMI
 data "aws_ami" "amazon_linux_2" {
-  most_recent = true
+  most_recent = var.ami_most_recent
   owners      = var.ami_filter_owners
 
   filter {
-    name   = "name"
+    name   = var.ami_filter_key
     values = [var.ami_filter_name]
   }
 }
@@ -25,7 +25,7 @@ data "aws_subnet" "lab_public_subnet" {
   vpc_id = data.aws_vpc.lab_vpc.id
 
   filter {
-    name   = "tag:Name"
+    name   = var.subnet_filter_key
     values = [var.subnet_name_filter]
   }
 }

@@ -56,4 +56,19 @@ variable "ami_filter_name" {
 variable "ami_filter_owners" {
   description = "The list of owners for the AWS AMI data source."
   type        = list(string)
+}
+
+variable "ami_most_recent" {
+  description = "Whether to select the most recent AMI."
+  type        = bool
+}
+
+variable "ami_filter_key" {
+  description = "The key for the AMI filter."
+  type        = string
+}
+
+variable "subnet_filter_key" {
+  description = "The key for the subnet filter."
+  type        = string
 } 
