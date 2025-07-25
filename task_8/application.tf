@@ -59,11 +59,6 @@ resource "aws_launch_template" "main" {
   instance_type = var.instance_type
   key_name      = data.aws_key_pair.main.key_name
 
-  vpc_security_group_ids = [
-    data.aws_security_group.ec2_sg.id,
-    data.aws_security_group.http_sg.id
-  ]
-
   iam_instance_profile {
     name = data.aws_iam_instance_profile.main.name
   }
