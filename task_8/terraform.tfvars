@@ -1,0 +1,17 @@
+aws_region            = "us-east-1"
+project_id            = "cmtr-zdv1y551"
+ami_id                = "ami-09e6f87a47903347c"
+instance_type         = "t3.micro"
+vpc_name              = "cmtr-zdv1y551-vpc"
+ec2_sg_name           = "cmtr-zdv1y551-ec2_sg"
+http_sg_name          = "cmtr-zdv1y551-http_sg"
+lb_sg_name            = "cmtr-zdv1y551-sglb"
+instance_profile_name = "cmtr-zdv1y551-instance_profile"
+key_pair_name         = "cmtr-zdv1y551-keypair"
+launch_template_name  = "cmtr-zdv1y551-template"
+asg_name              = "cmtr-zdv1y551-asg"
+load_balancer_name    = "cmtr-zdv1y551-loadbalancer"
+target_group_name     = "cmtr-zdv1y551-tg"
+asg_min_size          = 1
+asg_max_size          = 2
+asg_desired_capacity  = 2 
