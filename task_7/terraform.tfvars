@@ -1,0 +1,6 @@
+aws_region    = "us-east-1"
+project_id    = "cmtr-zdv1y551"
+state_bucket  = "cmtr-zdv1y551-tf-state-1753445077"
+state_key     = "infra.tfstate"
+instance_type = "t2.micro"
+instance_name = "cmtr-zdv1y551-ec2-remote" 
