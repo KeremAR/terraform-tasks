@@ -1,0 +1,9 @@
+aws_region           = "us-east-1"
+project_tag          = "cmtr-zdv1y551"
+allowed_ip_range     = ["18.153.146.156/32", "24.133.192.79/32"]
+vpc_id               = "vpc-04c5c5b36241bf576"
+public_instance_id   = "i-0e67376b04721413e"
+private_instance_id  = "i-03a896fe2b39c9a76"
+ssh_sg_name          = "cmtr-zdv1y551-ssh-sg"
+public_http_sg_name  = "cmtr-zdv1y551-public-http-sg"
+private_http_sg_name = "cmtr-zdv1y551-private-http-sg" 
